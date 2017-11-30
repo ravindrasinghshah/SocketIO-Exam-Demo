@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Socket.IO chat</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <link href="/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h2 class="">This is Socket.IO Questionnaire demo for real time programming!</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bs-callout bs-callout-danger">
+                    <label>Select Role:</label>
+                    <select id="selectRole">
+                        <option>--Select--</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="student">Student</option>
+                    </select>
+                    <span id="selectedRole"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="teacher-section" style="display:none">
+            <div class="col-md-8 col-md-offset-1">
+                <p>Select question from below for students</p>
+                <ul>
+                    <li>
+                        <span id="q0"> Value of 2 + 2 = ? </span>
+                        <button id="0" class="btn btn-primary btn-sm askQuestion">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </button>
+                        <span id="ans_0"></span>
+                    </li>
+                    <li>
+                        <span id="q1"> Value of 5 + 2 = ? </span>
+                        <button id="1" class="btn btn-primary btn-sm askQuestion">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </button>
+                        <span id="ans_1"></span>
+                    </li>
+                    <li>
+                        <span id="q2"> Value of 8 + 2 = ? </span>
+                        <button id="2" class="btn btn-primary btn-sm askQuestion">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </button>
+                        <span id="ans_2"></span>
+                    </li>
+                </ul>
+                <div id="divSendResult" style="display:none">
+                    <input type="text" id="resultNotes" style="width:50%" />
+                    <a id="btnSendNote" class="btn btn-primary">Send Note</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="row" id="student-section" style="display:none">
+            <div class="col-md-8 col-md-offset-1">
+                <p>Answer questions below:</p>
+                <ul id="questionList"></ul>
+            </div>
+        </div>
+        <div class="footer">
+                <div class="alert alert-info" role="alert">
+                    <strong>Note:</strong> How to use this demo?
+                    
+                    <ul>
+                    <li>Open instances of application in two browsers</li>    
+                    <li>Select different roles in each instances of browsers</li>
+                    <li>Teacher :: Select questions you want to ask student</li>
+                    <li>Student :: Will get the questions, answer questions and click check button</li>
+                    <li>Teacher :: Verify answer and mark as right or wrong</li>
+                    <li>Teacher :: Send Test Notes</li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+   
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="/main.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

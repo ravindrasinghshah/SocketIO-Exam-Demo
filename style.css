@@ -1,0 +1,31 @@
+
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout-danger{
+    border-left-color: #ce4844;
+}
+
+#teacher-section ul li{
+    padding:10px;
+}
+#teacher-section ul li span{
+    padding-right:10px; padding-left:10px;
+}
+
+
+#student-section ul li{
+    padding:10px;
+}
+#student-section ul li span{
+    padding-right:10px;
+    padding-left:10px;
+}
+
+.footer{
+    padding-top: 20px;
+}
